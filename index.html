@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan + Korea — Itinerary & Stay Considerations · Oct–Nov 2026</title>
+<style>
+  :root{
+    --ink:#2b2622; --ink-soft:#5d544c; --cream:#f7f1e7; --paper:#fffdf8;
+    --maple:#c0432b; --maple-deep:#9c3320; --persimmon:#e08a3c; --gold:#b8893b;
+    --sage:#6c7a5b; --indigo:#3a4a63; --line:#e4d8c5; --shadow:rgba(60,40,20,.10);
+    --joan:#8a5a9c; --rachael:#c0432b; --eric:#3a6ea5;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);
+    font-family:"Hiragino Mincho ProN","Iowan Old Style",Georgia,"Times New Roman",serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px 90px}
+  h1,h2,h3{font-family:"Hiragino Sans","Helvetica Neue",Arial,sans-serif;font-weight:700;letter-spacing:-.01em}
+  a{color:var(--maple-deep)}
+
+  header{background:linear-gradient(135deg,var(--maple) 0%,var(--maple-deep) 55%,#7a2818 100%);
+    color:#fdf6ec;padding:46px 20px 38px;text-align:center;position:relative;overflow:hidden}
+  header::after{content:"🍁";position:absolute;font-size:140px;opacity:.10;right:-10px;bottom:-30px;transform:rotate(-12deg)}
+  header .kicker{text-transform:uppercase;letter-spacing:.28em;font-size:12px;opacity:.85;font-family:"Hiragino Sans",sans-serif}
+  header h1{font-size:34px;margin:10px 0 6px}
+  header .sub{font-size:16px;opacity:.92;font-weight:400;font-family:Georgia,serif}
+  header .meta{margin-top:18px;display:inline-flex;gap:8px;flex-wrap:wrap;justify-content:center}
+  header .chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    border-radius:30px;padding:5px 14px;font-size:13px;font-family:"Hiragino Sans",sans-serif}
+  .header-row{display:flex;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap;position:relative;z-index:1}
+  .header-center{min-width:240px}
+  .scene{display:flex;flex-direction:column;align-items:center;gap:7px;margin:0}
+  .scene svg{width:168px;height:126px;display:block;border-radius:14px;
+    box-shadow:0 6px 18px rgba(40,15,10,.32);border:1px solid rgba(255,255,255,.3)}
+  .scene .cap{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    font-family:"Hiragino Sans",sans-serif;opacity:.92}
+  @media(max-width:640px){.scene svg{width:128px;height:96px}.header-row{gap:14px}header h1{font-size:27px}}
+
+  .decision{background:#fff;border:1px solid var(--line);border-left:6px solid var(--persimmon);
+    border-radius:12px;padding:16px 20px;margin:26px 0 4px;box-shadow:0 2px 10px var(--shadow)}
+  .decision b{color:var(--maple-deep)}
+  .decision p{margin:0;font-size:15px;color:var(--ink-soft)}
+
+  .brief{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0}
+  @media(max-width:680px){.brief{grid-template-columns:1fr}}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:0 2px 10px var(--shadow)}
+  .card h3{margin:0 0 10px;font-size:15px;color:var(--maple-deep);text-transform:uppercase;letter-spacing:.06em}
+  .card ul{margin:0;padding-left:18px}
+  .card li{margin:6px 0;font-size:15px;color:var(--ink-soft)}
+  .card li b{color:var(--ink)}
+
+  .section-title{font-size:13px;text-transform:uppercase;letter-spacing:.2em;color:var(--gold);
+    text-align:center;margin:46px 0 6px;font-family:"Hiragino Sans",sans-serif}
+  .section-rule{width:60px;height:3px;background:var(--persimmon);border-radius:3px;margin:0 auto 26px}
+
+  .timeline{position:relative;margin:0 auto;padding-left:34px}
+  .timeline::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .stop{position:relative;margin:0 0 14px;background:var(--paper);border:1px solid var(--line);
+    border-radius:12px;padding:14px 18px;box-shadow:0 1px 6px var(--shadow)}
+  .stop::before{content:"";position:absolute;left:-28px;top:20px;width:14px;height:14px;border-radius:50%;
+    background:var(--persimmon);border:3px solid var(--cream)}
+  .stop.city::before{background:var(--maple)}
+  .stop.transit{background:transparent;border:1px dashed var(--line);box-shadow:none}
+  .stop.transit::before{background:#cbbfa9}
+  .stop .date{font-size:12.5px;letter-spacing:.05em;color:var(--gold);font-family:"Hiragino Sans",sans-serif;font-weight:700;text-transform:uppercase}
+  .stop .where{font-size:18px;font-weight:700;font-family:"Hiragino Sans",sans-serif;margin:2px 0}
+  .stop .note{font-size:14px;color:var(--ink-soft)}
+  .stop .nights{float:right;font-size:12px;background:var(--sage);color:#fff;border-radius:20px;padding:2px 10px;font-family:"Hiragino Sans",sans-serif}
+
+  .city{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin:0 0 26px;
+    overflow:hidden;box-shadow:0 3px 14px var(--shadow)}
+  .city-head{padding:18px 22px;border-left:6px solid var(--maple);display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
+  .city-head h2{margin:0;font-size:22px}
+  .city-head .dates{font-size:13px;color:var(--ink-soft);font-family:"Hiragino Sans",sans-serif}
+  .pick{background:linear-gradient(180deg,#fff8ec,#fdf1df);border:1px solid #efd9b6;border-radius:10px;
+    padding:10px 14px;min-width:230px}
+  .pick .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-family:"Hiragino Sans",sans-serif;font-weight:700}
+  .pick .name{font-size:17px;font-weight:700;font-family:"Hiragino Sans",sans-serif;color:var(--maple-deep)}
+  .pick .tags{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
+  .tag{font-size:11.5px;border-radius:20px;padding:2px 9px;font-family:"Hiragino Sans",sans-serif;border:1px solid}
+  .tag.bed{background:#eef6ec;color:#3f6b3a;border-color:#cfe4c8}
+  .tag.stairs{background:#eef2f8;color:#36507a;border-color:#cdd9ea}
+  .tag.price{background:#fbeee9;color:var(--maple-deep);border-color:#f0cfc3}
+  .tag.warn{background:#fdf3e4;color:#9a6a1d;border-color:#f0ddb6}
+  .city-body{padding:6px 22px 4px}
+  .city-body p{margin:12px 0;font-size:15px}
+  .birthday{background:#fff3e2;border:1px solid #f0ddb6;border-radius:9px;padding:10px 13px;font-size:14.5px}
+
+  /* Comparison table */
+  .cmp-wrap{padding:6px 22px 18px;overflow-x:auto}
+  table.cmp{width:100%;border-collapse:collapse;font-size:13.5px;min-width:680px}
+  table.cmp th{background:#f3ead9;color:var(--ink);text-align:left;padding:9px 11px;font-family:"Hiragino Sans",sans-serif;
+    font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--line)}
+  table.cmp td{padding:10px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.cmp tr.rec td{background:#fff8ec}
+  table.cmp tr.rec td:first-child{border-left:4px solid var(--persimmon)}
+  .prop{font-weight:700;font-family:"Hiragino Sans",sans-serif;color:var(--ink);font-size:14px}
+  .prop .badge{display:inline-block;background:var(--persimmon);color:#fff;font-size:10px;border-radius:10px;
+    padding:1px 7px;margin-left:5px;vertical-align:middle;letter-spacing:.04em}
+  .ptype{display:block;font-size:11.5px;color:var(--ink-soft);font-weight:400;font-family:Georgia,serif;margin-top:2px}
+  .pros{color:#3f6b3a} .cons{color:#9a4a32}
+  .cmp .rate{font-weight:700;font-family:"Hiragino Sans",sans-serif;white-space:nowrap}
+  .cmp .rate small{display:block;font-weight:400;color:var(--ink-soft);font-size:11px}
+  .viewbtn{display:inline-block;background:var(--maple);color:#fff;text-decoration:none;border-radius:18px;
+    padding:5px 12px;font-size:12px;font-family:"Hiragino Sans",sans-serif;white-space:nowrap}
+  .viewbtn:hover{background:var(--maple-deep)}
+
+  .status-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.status-grid{grid-template-columns:1fr}}
+  .ok{color:#3f6b3a;font-weight:700} .wait{color:#9a6a1d;font-weight:700}
+  .wx{display:block;margin-top:3px;font-size:12.5px;color:var(--indigo);font-family:"Hiragino Sans",sans-serif}
+  .laundry{background:#eef2f8;border:1px solid #cdd9ea;border-radius:9px;padding:10px 13px;font-size:14.5px;color:#33455c}
+  .acts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.acts{grid-template-columns:1fr}}
+  .actcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 2px 10px var(--shadow)}
+  .actcard h3{margin:0 0 10px;font-size:18px}
+  .actcard .row{font-size:14px;color:var(--ink-soft);margin:8px 0;line-height:1.5}
+  .actcard .row b{color:var(--ink)}
+  .actcard .ic{font-style:normal}
+  .whoBar{position:sticky;top:0;z-index:40;background:#fffdf8;border-bottom:1px solid var(--line);
+    padding:9px 14px;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;
+    font-family:"Hiragino Sans",sans-serif;font-size:13px;box-shadow:0 2px 6px var(--shadow)}
+  .whoBar .who-opt{cursor:pointer;border:1px solid var(--line);border-radius:20px;padding:4px 13px;background:#fff;color:var(--ink)}
+  .whoBar .who-opt.active{color:#fff;border-color:transparent}
+  .whoBar .who-opt.joan.active{background:var(--joan)} .whoBar .who-opt.rachael.active{background:var(--rachael)} .whoBar .who-opt.eric.active{background:var(--eric)}
+  .votes{margin:2px 0 12px}
+  .vlabel{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);font-family:"Hiragino Sans",sans-serif;margin-bottom:6px}
+  .vchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:20px;
+    padding:4px 11px;margin:0 6px 6px 0;font-size:13px;cursor:pointer;font-family:"Hiragino Sans",sans-serif}
+  .vchip .cnt{background:var(--sage);color:#fff;border-radius:12px;padding:0 7px;font-size:11px;min-width:18px;text-align:center}
+  .vchip.mine{border-color:var(--maple);box-shadow:0 0 0 2px rgba(192,67,43,.15)}
+  .thread{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+  .msg{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-size:14px}
+  .msg .who{font-weight:700;font-family:"Hiragino Sans",sans-serif}
+  .msg .who.joan{color:var(--joan)} .msg .who.rachael{color:var(--rachael)} .msg .who.eric{color:var(--eric)}
+  .msg .t{font-size:11px;color:var(--ink-soft);margin-left:6px;font-weight:400}
+  .postrow{display:flex;gap:8px;margin-top:10px}
+  .postrow input{flex:1;border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-family:inherit;font-size:14px;background:#fff;color:var(--ink)}
+  .postrow .btn{padding:9px 16px}
+
+  .comments{background:#faf4ea;border-top:1px solid var(--line);padding:16px 22px 20px}
+  .comments h4{margin:0 0 6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);font-family:"Hiragino Sans",sans-serif}
+  .comments .hint{font-size:13px;color:var(--ink-soft);margin:0 0 12px}
+  .cbox{margin:0 0 10px}
+  .cbox label{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;
+    font-family:"Hiragino Sans",sans-serif;margin-bottom:4px}
+  .dot{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .dot.joan{background:var(--joan)} .dot.rachael{background:var(--rachael)} .dot.eric{background:var(--eric)}
+  .cbox textarea{width:100%;min-height:44px;resize:vertical;border:1px solid var(--line);border-radius:9px;
+    padding:9px 11px;font-family:inherit;font-size:14.5px;background:#fff;color:var(--ink)}
+  .cbox.joan textarea:focus{outline:2px solid var(--joan)}
+  .cbox.rachael textarea:focus{outline:2px solid var(--rachael)}
+  .cbox.eric textarea:focus{outline:2px solid var(--eric)}
+
+  .toolbar{position:fixed;bottom:18px;right:18px;display:flex;gap:10px;z-index:50}
+  .btn{background:var(--maple);color:#fff;border:none;border-radius:30px;padding:11px 18px;font-size:14px;
+    font-family:"Hiragino Sans",sans-serif;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(120,40,20,.3)}
+  .btn.ghost{background:#fff;color:var(--maple-deep);border:1px solid var(--line)}
+  .btn:active{transform:translateY(1px)}
+  .saveflag{position:fixed;bottom:70px;right:18px;background:var(--sage);color:#fff;padding:6px 14px;border-radius:20px;
+    font-size:13px;font-family:"Hiragino Sans",sans-serif;opacity:0;transition:opacity .3s;z-index:50}
+  .saveflag.show{opacity:1}
+
+  .modal{position:fixed;inset:0;background:rgba(40,30,20,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+  .modal.show{display:flex}
+  .modal-inner{background:var(--paper);border-radius:14px;max-width:680px;width:100%;max-height:84vh;overflow:auto;padding:24px}
+  .modal-inner h3{margin:0 0 12px}
+  .modal-inner textarea{width:100%;min-height:300px;font-family:ui-monospace,Menlo,monospace;font-size:13px;
+    border:1px solid var(--line);border-radius:10px;padding:12px}
+  .modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:12px}
+  footer{text-align:center;color:var(--ink-soft);font-size:13px;margin-top:40px}
+</style>
+</head>
+<body>
+
+<div id="setupBar" style="display:none;background:#fff3e2;border-bottom:1px solid #f0ddb6;color:#7a531c;padding:9px 16px;font:13px/1.5 'Hiragino Sans',Arial,sans-serif;text-align:center">
+  ⚙ <b>Rachael — one-time setup to turn on the live shared board:</b> follow <b>Shared_Board_Setup.md</b> (in this folder) to create a free Google Sheet + script, then paste your web-app link into the <code>API_URL</code> line near the bottom of this file. Until then, voting &amp; comments are switched off.
+</div>
+
+<header>
+  <div class="header-row">
+
+    <figure class="scene">
+      <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Japan — Mount Fuji and a torii gate">
+        <defs>
+          <linearGradient id="jpSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe6d0"/><stop offset="1" stop-color="#f4c9b0"/></linearGradient>
+          <linearGradient id="jpFuji" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fb3cc"/><stop offset="1" stop-color="#cdd9e6"/></linearGradient>
+        </defs>
+        <rect width="200" height="150" rx="14" fill="url(#jpSky)"/>
+        <circle cx="150" cy="42" r="20" fill="#f2a65a" opacity="0.85"/>
+        <path d="M22 124 L92 46 L162 124 Z" fill="url(#jpFuji)"/>
+        <path d="M74 66 L92 46 L110 66 C103 61, 99 65, 92 61 C85 65, 81 61, 74 66 Z" fill="#fffdf9"/>
+        <rect x="0" y="120" width="200" height="30" fill="#7fa07a"/>
+        <rect x="0" y="120" width="200" height="6" fill="#6c8e69"/>
+        <g fill="#b8362a">
+          <rect x="118" y="92" width="7" height="34"/><rect x="150" y="92" width="7" height="34"/>
+          <path d="M108 84 q29 -9 59 0 l-3 8 q-26 -7 -53 0 Z"/><rect x="113" y="98" width="49" height="6" rx="1"/>
+        </g>
+      </svg>
+      <figcaption class="cap">Japan</figcaption>
+    </figure>
+
+    <div class="header-center">
+      <div class="kicker">Autumn 2026 · Japan + Korea</div>
+      <h1>Where We're Staying</h1>
+      <div class="sub">A 3-night-per-city journey · Tokyo → Kyoto → Fukuoka → Busan → Seoul</div>
+    </div>
+
+    <figure class="scene">
+      <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="South Korea — a hanok palace gate before mountains">
+        <defs><linearGradient id="krSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8eef0"/><stop offset="1" stop-color="#cddbd9"/></linearGradient></defs>
+        <rect width="200" height="150" rx="14" fill="url(#krSky)"/>
+        <path d="M-5 112 L48 58 L96 112 Z" fill="#7d8f73" opacity="0.55"/>
+        <path d="M70 112 L128 50 L196 112 Z" fill="#67795f" opacity="0.6"/>
+        <rect x="0" y="108" width="200" height="42" fill="#b9a68a"/>
+        <rect x="52" y="92" width="96" height="32" fill="#caa97f"/>
+        <path d="M86 124 v-18 a14 14 0 0 1 28 0 v18 Z" fill="#5a4632"/>
+        <g fill="#9c3f2c"><rect x="60" y="80" width="7" height="22"/><rect x="133" y="80" width="7" height="22"/><rect x="96" y="80" width="7" height="22"/></g>
+        <path d="M36 82 Q48 64 70 67 L130 67 Q152 64 164 82 Q150 75 134 78 L66 78 Q50 75 36 82 Z" fill="#33455c"/>
+        <path d="M44 70 Q100 56 156 70 L150 64 Q100 52 50 64 Z" fill="#27384d"/>
+      </svg>
+      <figcaption class="cap">South Korea</figcaption>
+    </figure>
+
+  </div>
+  <div class="meta">
+    <span class="chip">🗓 Oct 16 – Nov 3, 2026</span>
+    <span class="chip">👥 Eric · Rachael · Joan</span>
+    <span class="chip">🛏 Comfortable beds · easy access</span>
+    <span class="chip">💴 ≤ $500/room (splurge if extraordinary)</span>
+    <span class="chip" id="updated">🕓 Updated 11 June 2026</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="whoBar" id="whoBar"></div>
+
+  <div class="decision">
+    <p><b>How to use this page:</b> it's for the three of us to weigh the options and decide together. First, tap your name in the bar above so we know who's posting. Then for each city: review the recommended pick and the comparison table, <b>tap your preferred place to vote</b>, and add comments in the thread. Everyone sees the same live votes and conversation — it updates for all of us.</p>
+  </div>
+
+  <div class="brief">
+    <div class="card">
+      <h3>The three of us</h3>
+      <ul>
+        <li><b>Eric & Rachael</b> and <b>Joan</b> (Rachael's mum) — traveling together, meeting Eric in Tokyo.</li>
+        <li>Two birthdays to celebrate along the way: <b>Rachael's on Oct 18</b> in Tokyo, and <b>Joan's on Oct 29</b> in Busan.</li>
+        <li><b>First trip for Joan</b> — everywhere's new, so we'll be sure to hit the icons. Rachael has been to Japan before, and Eric knows both Japan &amp; Korea, so he can point us to favorites (and a few off-the-beaten-path finds).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>What we're after</h3>
+      <ul>
+        <li><b>Luxurious but boutique</b> — quiet, characterful, walkable to sights; historic neighborhoods over party areas. No big Western chains.</li>
+        <li><b>Two rooms</b> (or a place that sleeps three with separate bedrooms) so we each have our own space, <b>comfortable Western beds</b>, and easy, <b>lift / step-free access</b> where we can get it — nicer for everyone after long days out.</li>
+        <li><b>≤ $500/room/night</b> — unless a place is a genuine heritage experience (our "Ancient Hue Garden House" benchmark).</li>
+        <li>Traveling <b>carry-on only</b>, so a stay with <b>in-unit laundry</b> (or easy send-out) at least once mid-trip is a real plus — the apartment options below cover it.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title">The Route</div>
+  <div class="section-rule"></div>
+  <div class="timeline">
+    <div class="stop transit"><div class="date">Oct 16 · eve</div><div class="where">Fly Denver → Tokyo ✈️</div></div>
+    <div class="stop city"><span class="nights">3 nights</span><div class="date">Oct 18 – 21</div><div class="where">Tokyo</div><div class="note">Arrive, meet Eric · 🎂 Rachael's birthday on the 18th</div></div>
+    <div class="stop transit"><div class="date">Oct 21</div><div class="where">Shinkansen → Kyoto 🚄</div></div>
+    <div class="stop city"><span class="nights">3 nights</span><div class="date">Oct 21 – 24</div><div class="where">Kyoto</div><div class="note">Day trip to Dotonbori, Osaka</div></div>
+    <div class="stop transit"><div class="date">Oct 24</div><div class="where">Shinkansen → Fukuoka 🚄</div></div>
+    <div class="stop city"><span class="nights">3 nights</span><div class="date">Oct 24 – 27</div><div class="where">Fukuoka</div><div class="note">Possible onsen side-trip to Yufuin</div></div>
+    <div class="stop transit"><div class="date">Oct 27</div><div class="where">Ferry / flight → Busan ⛴</div></div>
+    <div class="stop city"><span class="nights">3 nights</span><div class="date">Oct 27 – 30</div><div class="where">Busan</div><div class="note">Haeundae Beach · 🎂 Joan's birthday on the 29th</div></div>
+    <div class="stop transit"><div class="date">Oct 30</div><div class="where">KTX → Seoul 🚄</div></div>
+    <div class="stop city"><span class="nights">3 nights</span><div class="date">Oct 30 – Nov 2</div><div class="where">Seoul</div><div class="note">Palaces & hanok quarters</div></div>
+    <div class="stop transit"><div class="date">Nov 2 – 3</div><div class="where">Fly Incheon → Denver · home ✈️</div></div>
+  </div>
+
+  <div class="section-title">Getting There — Flights</div>
+  <div class="section-rule"></div>
+  <p style="text-align:center;color:var(--ink-soft);font-size:14px;max-width:730px;margin:0 auto 20px">
+    Prioritizing <b>United &amp; Star Alliance</b> (points-friendly), business class where it's affordable. Business award seats are limited, so worth booking early — and confirm live schedules &amp; fares before ticketing.
+  </p>
+  <div class="acts">
+    <div class="actcard">
+      <h3>Rachael &amp; Joan · Denver → Tokyo</h3>
+      <div class="row"><b>Oct 16 evening → arrive Tokyo Oct 18.</b></div>
+      <div class="row"><b><span class="ic">✈️</span> Best:</b> United nonstop <b>DEN → Tokyo Narita</b> in Polaris business — the only nonstop, roughly 4×/week, ~12 h. Confirm it operates on the 16th.</div>
+      <div class="row"><b><span class="ic">🔁</span> Flexible:</b> United 1-stop via San Francisco, LA, Chicago or Washington to Haneda/Narita — more departure times and usually more Polaris award space.</div>
+    </div>
+    <div class="actcard">
+      <h3>Eric · Taipei → Tokyo</h3>
+      <div class="row"><b>Arrive Oct 18 to meet Rachael &amp; Joan.</b></div>
+      <div class="row"><b><span class="ic">✈️</span> Best:</b> <b>EVA Air</b> (Star Alliance) nonstop <b>TPE → Tokyo Haneda/Narita</b>, ~3 h, Royal Laurel business; ANA &amp; United fly it too.</div>
+      <div class="row"><b><span class="ic">🎟</span> Points:</b> bookable with United MileagePlus or EVA Infinity miles. Aim the arrival close to the Denver flight so everyone meets up.</div>
+    </div>
+    <div class="actcard" style="grid-column:1/-1">
+      <h3>All three · Seoul → Denver (return, Nov 2)</h3>
+      <div class="row"><b><span class="ic">✈️</span> Best:</b> No nonstop. <b>United via San Francisco</b> — UA <b>ICN → SFO</b> (Polaris) then SFO → DEN, all United/Star Alliance on one ticket. LA or Chicago hubs work too.</div>
+      <div class="row"><b><span class="ic">🎟</span> Points &amp; business:</b> redeem through United MileagePlus (own metal) or Aeroplan / ANA for partner space; transpacific business one-way typically runs ~88k–120k miles + taxes. Note: Asiana's Star Alliance partnership winds down with its Korean Air merger on <b>Dec 17, 2026</b> — after this trip, so November redemptions are fine.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Stay Considerations — compare & choose, one per city</div>
+  <div class="section-rule"></div>
+
+  <!-- TOKYO -->
+  <div class="city" data-city="Tokyo">
+    <div class="city-head">
+      <div><h2>Tokyo</h2><div class="dates">Oct 18 – 21 · 3 nights · 🎂 Rachael's birthday<span class="wx">⛅ Typically 13–21°C (56–70°F), mild autumn days</span></div></div>
+      <div class="pick">
+        <div class="lbl">Recommended</div>
+        <div class="name">Hotel Chinzanso</div>
+        <div class="tags"><span class="tag bed">Western beds</span><span class="tag stairs">Elevator</span><span class="tag price">~$415/rm · 9.4★</span></div>
+      </div>
+    </div>
+    <div class="city-body">
+      <p>The rare pick that's both the heritage <b>splurge wish</b> and <b>within budget</b>: a 700-year-old, 17-acre garden estate — pagoda, maples, hot-spring baths — in the spirit of the Hue garden house, but the live quote came back at <b>~$415/room</b>, with comfortable beds, a lift to every floor, and a 9.4/10 score. Bookable online today.</p>
+      <p class="birthday"><b>🎂 Rachael's birthday is the day we arrive.</b> Chinzanso's gardens make a lovely backdrop for a celebratory first-night dinner to kick off the trip.</p>
+    </div>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th>Property</th><th>Pros</th><th>Cons</th><th>Price/night</th><th>Rating</th><th></th></tr></thead>
+        <tbody>
+          <tr class="rec">
+            <td><span class="prop">Hotel Chinzanso<span class="badge">★ Pick</span></span><span class="ptype">Historic garden hotel · Bunkyo — Mejiro garden district</span></td>
+            <td class="pros">700-yr garden estate, onsen baths, beds + lift, garden suites sleep 3</td>
+            <td class="cons">~25 min from Ginza; grand rather than intimate</td>
+            <td>~$415/rm</td>
+            <td class="rate">9.4★<small>Booking</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/hotel/jp/chinzanso-tokyo.html?aid=8132308&checkin=2026-10-18&checkout=2026-10-21&no_rooms=2&group_adults=3&selected_currency=USD">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hotel%20Chinzanso%20Tokyo">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Nohga Hotel Ueno</span><span class="ptype">Design boutique · Ueno / Yanesen</span></td>
+            <td class="pros">By Ueno museums & Yanaka lanes, on-site bistro, quiet, great value</td>
+            <td class="cons">Rooms compact; book two rooms</td>
+            <td>~$130–300/rm</td>
+            <td class="rate">9.1★<small>Booking · 1,933</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=Nohga+Hotel+Ueno+Tokyo&checkin=2026-10-18&checkout=2026-10-21&group_adults=3">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nohga%20Hotel%20Ueno%20Tokyo">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Hotel K5</span><span class="ptype">Design boutique · Nihonbashi</span></td>
+            <td class="pros">1920s former bank, striking Stockholm design, central & calm at night</td>
+            <td class="cons">Dark, very design-forward; pricier; book two rooms</td>
+            <td>~$300–400/rm</td>
+            <td class="rate">9.3★<small>Booking · 615</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=Hotel+K5+Tokyo&checkin=2026-10-18&checkout=2026-10-21&group_adults=3">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hotel%20K5%20Nihonbashi%20Tokyo">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">LoveTokyo Nezu Sunset House</span><span class="ptype">Whole apartment · Nezu / Yanesen</span></td>
+            <td class="pros">Old-Tokyo lanes, elevator, kitchen, in-unit washer, sleeps all three, excellent value</td>
+            <td class="cons">Self check-in, no staff/service; one shared unit</td>
+            <td>$146 (live)</td>
+            <td class="rate">9.1★<small>Booking</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/hotel/jp/lovetokyo.html?aid=8132308&checkin=2026-10-18&checkout=2026-10-21&no_rooms=1&group_adults=3&selected_currency=USD">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nezu%20Station%20Bunkyo%20Tokyo">Map ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="comments"><h4>Vote &amp; discuss</h4><p class="hint">Which would you choose for Tokyo — and any notes?</p></div>
+  </div>
+
+  <!-- KYOTO -->
+  <div class="city" data-city="Kyoto">
+    <div class="city-head">
+      <div><h2>Kyoto</h2><div class="dates">Oct 21 – 24 · 3 nights<span class="wx">⛅ Typically 11–20°C (52–68°F), crisp mornings, early foliage</span></div></div>
+      <div class="pick">
+        <div class="lbl">Recommended</div>
+        <div class="name">Hotel Kanra Kyoto</div>
+        <div class="tags"><span class="tag bed">Western beds</span><span class="tag stairs">Elevator</span><span class="tag price">~$190–460 · 9.3★</span></div>
+      </div>
+    </div>
+    <div class="city-body">
+      <p>The legendary ryokan tempt hardest here — but the most revered ones use floor futons and have steeper, older staircases, less ideal after long days out. <b>Hotel Kanra</b> keeps the traditional machiya character (hinoki-wood tubs, restored-townhouse design) while pairing it with <b>proper beds, a lift, and a central, walkable location</b> — the best all-round fit, and superior rooms sleep three.</p>
+    </div>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th>Property</th><th>Pros</th><th>Cons</th><th>Price/night</th><th>Rating</th><th></th></tr></thead>
+        <tbody>
+          <tr class="rec">
+            <td><span class="prop">Hotel Kanra Kyoto<span class="badge">★ Pick</span></span><span class="ptype">Machiya boutique · Shimogyo — central</span></td>
+            <td class="pros">Modern-machiya design, hinoki tubs, beds + lift, central, rooms sleep 3</td>
+            <td class="cons">Hotel feel vs a true ryokan</td>
+            <td>~$190–460/rm</td>
+            <td class="rate">9.3★<small>Booking · 576</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=Hotel+Kanra+Kyoto&checkin=2026-10-21&checkout=2026-10-24&group_adults=3">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hotel%20Kanra%20Kyoto">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Nanzenji Sando Kikusui</span><span class="ptype">Ryokan (beds) · Nanzenji / N. Higashiyama</span></td>
+            <td class="pros">Serene lane by Nanzen-ji, beds, garden, acclaimed kaiseki cuisine</td>
+            <td class="cons">Away from central shopping; rates climb in peak</td>
+            <td>~$350–500/rm</td>
+            <td class="rate">9.5★<small>Booking · 4/5 TA</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=Nanzenji+Sando+Kikusui&checkin=2026-10-21&checkout=2026-10-24&group_adults=3">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nanzenji%20Sando%20Kikusui%20Kyoto">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Hiiragiya Ryokan</span><span class="ptype">Heritage ryokan · 1818 · Nakagyo — Sanjo, central</span></td>
+            <td class="pros">Two centuries of heritage, exquisite kaiseki, lift, museum-quality rooms</td>
+            <td class="cons">Traditional futon bedding (ask re bed); $$$; books direct</td>
+            <td>~$700–1,400/rm</td>
+            <td class="rate">4/5★<small>Tripadvisor · 401</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.hiiragiya.co.jp/en/">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hiiragiya%20Ryokan%20Kyoto">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Machiya Residence Inn — 'Wakaba'</span><span class="ptype">Whole machiya house · Higashiyama / Kiyomizu</span></td>
+            <td class="pros">Traditional townhouse, Western king beds + tatami, whole house for three</td>
+            <td class="cons">Two floors (stairs); books direct; no daily service</td>
+            <td>~$300–500</td>
+            <td class="rate">—<small>Books direct</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.kyoto-machiya-inn.com/accommodations/wakaba/">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Higashiyama%20Kiyomizu%20Kyoto">Map ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="comments"><h4>Vote &amp; discuss</h4><p class="hint">Kanra for comfort, or chase the Hiiragiya ryokan dream? Tell us.</p></div>
+  </div>
+
+  <!-- FUKUOKA -->
+  <div class="city" data-city="Fukuoka">
+    <div class="city-head">
+      <div><h2>Fukuoka</h2><div class="dates">Oct 24 – 27 · 3 nights<span class="wx">⛅ Typically 14–21°C (57–70°F), mild Kyushu weather</span></div></div>
+      <div class="pick">
+        <div class="lbl">Recommended</div>
+        <div class="name">Agora Fukuoka Hilltop</div>
+        <div class="tags"><span class="tag bed">Western beds</span><span class="tag stairs">Quiet hilltop</span><span class="tag price">~$120–200 · 8.3★</span></div>
+      </div>
+    </div>
+    <div class="city-body">
+      <p>For our three nights in the city, <b>Agora Hilltop</b> is the sweet spot: a quiet hilltop design hotel with a spa and public bath, comfortable beds, peaceful, and excellent value. The big decision here is whether to fold in a special <b>onsen side-trip to Sanso Murata</b> in Yufuin (extraordinary, but ~90 min away and an overnight detour).</p>
+      <p class="laundry"><b>🧺 Mid-trip laundry stop.</b> Fukuoka sits right at the half-way mark — the ideal place to reset for carry-on travel. The <b>Tenjin TUMUGU</b> apartment has an in-unit washer; coin laundromats are easy to find nearby; and most hotels (Agora included) offer same-day laundry service. Busan's Ciel de Mer also has a washer/dryer if we'd rather wash a couple of days later.</p>
+    </div>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th>Property</th><th>Pros</th><th>Cons</th><th>Price/night</th><th>Rating</th><th></th></tr></thead>
+        <tbody>
+          <tr class="rec">
+            <td><span class="prop">Agora Fukuoka Hilltop<span class="badge">★ Pick</span></span><span class="ptype">Design hotel & spa · Chuo — hilltop</span></td>
+            <td class="pros">Quiet hilltop, spa & public bath, beds, great value, short ride to Tenjin</td>
+            <td class="cons">Not walkable to nightlife; solid (not stellar) score</td>
+            <td>~$120–200/rm</td>
+            <td class="rate">8.3★<small>Booking</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=Agora+Fukuoka+Hilltop+Hotel+Spa&checkin=2026-10-24&checkout=2026-10-27&group_adults=3">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Agora%20Fukuoka%20Hilltop%20Hotel%20Spa">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Hotel Cultia Dazaifu</span><span class="ptype">Restored heritage · Dazaifu — by Tenmangu shrine</span></td>
+            <td class="pros">By Dazaifu shrine & national museum, atmospheric, top-rated locally</td>
+            <td class="cons">~40 min from central Fukuoka; some steep interior steps</td>
+            <td>~$300–400/rm</td>
+            <td class="rate">9.0★<small>Booking · 4/5 TA</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=Hotel+Cultia+Dazaifu&checkin=2026-10-24&checkout=2026-10-27&group_adults=3">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hotel%20Cultia%20Dazaifu">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Apartment Hotel Tenjin TUMUGU</span><span class="ptype">Whole apartment · Tenjin (Chuo-ku)</span></td>
+            <td class="pros">Central Tenjin, lift & step-free, kitchen, in-unit laundry, walk to shopping, good value</td>
+            <td class="cons">Apartment (self-service); one unit</td>
+            <td>$196 (live)</td>
+            <td class="rate">8.6★<small>Booking</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/hotel/jp/apartment-tenjin-tumugu.html?aid=8132308&checkin=2026-10-24&checkout=2026-10-27&no_rooms=1&group_adults=3&selected_currency=USD">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Apartment%20Hotel%20Tenjin%20Tumugu%20Fukuoka">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Sanso Murata (Yufuin)</span><span class="ptype">Heritage onsen ryokan · side-trip · Yufuin, Oita — side-trip</span></td>
+            <td class="pros">Centuries-old folk-house villas, private onsen, Western-decor villas, singular</td>
+            <td class="cons">~90 min away (overnight detour); hillside steps; $$$; books direct</td>
+            <td>~$700–1,200/rm</td>
+            <td class="rate">★★★★½<small>Top Yufuin ryokan (TA)</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://sansou-murata.com/en/">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sanso%20Murata%20Yufuin">Map ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="comments"><h4>Vote &amp; discuss</h4><p class="hint">Stay put at Agora, or carve out a night at the Yufuin onsen?</p></div>
+  </div>
+
+  <!-- BUSAN -->
+  <div class="city" data-city="Busan">
+    <div class="city-head">
+      <div><h2>Busan</h2><div class="dates">Oct 27 – 30 · 3 nights · 🎂 Joan's birthday<span class="wx">🌤 Typically 11–19°C (52–66°F), breezy by the coast</span></div></div>
+      <div class="pick">
+        <div class="lbl">Recommended</div>
+        <div class="name">JB Design Hotel Haeundae</div>
+        <div class="tags"><span class="tag bed">Western beds</span><span class="tag warn">High floor for quiet</span><span class="tag price">~$100–200 · 8.3★</span></div>
+      </div>
+    </div>
+    <div class="city-body">
+      <p>Busan's best options cluster at Haeundae Beach, so this leg leans seaside. <b>JB Design Hotel</b> is the boutique choice — individually decorated rooms with soaking tubs, comfortable beds, and two rooms so we each have our own space. Ask for a high floor to stay above road noise. The ocean-view apartments are unbeatable value if we're happy self-catering.</p>
+      <p class="birthday"><b>🎂 Joan's birthday lands here.</b> Worth a toast — an ocean-view room and a special seafood dinner on Haeundae would make a fun night for everyone.</p>
+    </div>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th>Property</th><th>Pros</th><th>Cons</th><th>Price/night</th><th>Rating</th><th></th></tr></thead>
+        <tbody>
+          <tr class="rec">
+            <td><span class="prop">JB Design Hotel Haeundae<span class="badge">★ Pick</span></span><span class="ptype">Design boutique · Haeundae Beach</span></td>
+            <td class="pros">By the beach, soaking tubs, individually styled, two rooms = own space</td>
+            <td class="cons">Some road noise (ask high floor); score 8.3</td>
+            <td>~$100–200/rm</td>
+            <td class="rate">8.3★<small>Booking · 392</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=JB+Design+Hotel+Haeundae+Busan&checkin=2026-10-27&checkout=2026-10-30&group_adults=3">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=JB%20Design%20Hotel%20Haeundae%20Busan">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Ciel de Mer</span><span class="ptype">Beachfront apartment · Haeundae Beach</span></td>
+            <td class="pros">Ocean-view, elevator, spacious, washer/dryer in unit, superb value, very high score</td>
+            <td class="cons">Apartment, no front desk; one unit unless 2-bed</td>
+            <td>$73 (live)</td>
+            <td class="rate">9.2★<small>Booking · 602</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/hotel/kr/ssieldeumereu.html?aid=8132308&checkin=2026-10-27&checkout=2026-10-30&no_rooms=1&group_adults=3&selected_currency=USD">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ciel%20de%20Mer%20Haeundae%20Busan">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">HERA Ocean View Haeundae</span><span class="ptype">Beachfront apartment · Haeundae Beach</span></td>
+            <td class="pros">Ocean-view tower, elevator, steps to the sand, loved for location</td>
+            <td class="cons">Apartment self-service; layout varies by unit</td>
+            <td>$113 (live)</td>
+            <td class="rate">Loved★<small>Booking location 9.8</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/hotel/kr/elbonbona-peurimieo-deobeulosyeon.html?aid=8132308&checkin=2026-10-27&checkout=2026-10-30&no_rooms=1&group_adults=3&selected_currency=USD">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hera%20Ocean%20View%20Haeundae%20Busan">Map ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="comments"><h4>Vote &amp; discuss</h4><p class="hint">Boutique hotel, or a big ocean-view apartment? And ideas for the birthday night.</p></div>
+  </div>
+
+  <!-- SEOUL -->
+  <div class="city" data-city="Seoul">
+    <div class="city-head">
+      <div><h2>Seoul</h2><div class="dates">Oct 30 – Nov 2 · 3 nights<span class="wx">🍂 Typically 6–15°C (43–59°F), cooler — pack a warm layer</span></div></div>
+      <div class="pick">
+        <div class="lbl">Recommended · pending reply</div>
+        <div class="name">Rakkojae (Bukchon)</div>
+        <div class="tags"><span class="tag warn">Floor bedding</span><span class="tag warn">Hilly lanes</span><span class="tag price">~$400–800</span></div>
+      </div>
+    </div>
+    <div class="city-body">
+      <p>The closest match in the whole trip to the Hue garden house: a 130-year-old hanok restored by a master carpenter, five rooms around a courtyard, the first hanok in the Michelin Seoul guide. The trade-offs are <b>traditional ondol floor bedding</b> and <b>Bukchon's hilly, stepped lanes</b> — our enquiry email asks whether a bed can be arranged and which room has the easiest approach. If those come back well, it's a memorable way to end the trip; if not, flatter, quieter <b>Seochon</b> has lovely hanok stays.</p>
+    </div>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th>Property</th><th>Pros</th><th>Cons</th><th>Price/night</th><th>Rating</th><th></th></tr></thead>
+        <tbody>
+          <tr class="rec">
+            <td><span class="prop">Rakkojae (Bukchon)<span class="badge">★ Pick</span></span><span class="ptype">Heritage hanok · Bukchon Hanok Village</span></td>
+            <td class="pros">130-yr master-carpenter hanok, Michelin-listed, courtyard garden, by the palaces</td>
+            <td class="cons">Ondol floor bedding (ask re bed); hilly/stepped lanes; $$$; books direct</td>
+            <td>~$400–800/rm</td>
+            <td class="rate">4/5★<small>TA · 8.6 HC</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.rkj.co.kr/">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rakkojae%20Seoul%20Bukchon">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Stayfolio — Seochon Byuldang</span><span class="ptype">Modern hanok (whole unit) · Seochon — by Gyeongbokgung</span></td>
+            <td class="pros">Design hanok, courtyard + private jacuzzi, flatter & quieter Seochon</td>
+            <td class="cons">Whole unit (confirm separate room/bed); books direct; no service</td>
+            <td>~$300–450</td>
+            <td class="rate">Curated★<small>Stayfolio pick</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.stayfolio.com/en/findstay/seochon-byuldang">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Seochon%20Byuldang%20Seoul">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Constello Myeongdong</span><span class="ptype">Serviced apartment · Myeongdong (Jung-gu)</span></td>
+            <td class="pros">Beds, lift, step-free, central, great value, very high recent scores</td>
+            <td class="cons">Myeongdong shopping-core is busier (less quiet)</td>
+            <td>$161 (live)</td>
+            <td class="rate">9.6★<small>Trip.com (small)</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/hotel/kr/konseutelro-myeongdong-constello-myeongdong.html?aid=8132308&checkin=2026-10-30&checkout=2026-11-02&no_rooms=1&group_adults=3&selected_currency=USD">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Constello%20Myeongdong%20Seoul">Map ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="prop">Seochon Orak Stay</span><span class="ptype">Whole apartment · Seochon (Jongno)</span></td>
+            <td class="pros">Hanok-quarter unit near Gyeongbokgung, flatter Seochon, value</td>
+            <td class="cons">Confirm beds/steps; self-service</td>
+            <td>$100 (live)</td>
+            <td class="rate">—<small>on Booking.com</small></td>
+            <td><a class="viewbtn" target="_blank" rel="noopener" href="https://www.booking.com/hotel/kr/seocon-orag-seutei.html?aid=8132308&checkin=2026-10-30&checkout=2026-11-02&no_rooms=1&group_adults=3&selected_currency=USD">View ↗</a><a class="viewbtn" style="background:#3a6ea5;margin-top:4px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Seochon%20Orak%20Stay%20Seoul">Map ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="comments"><h4>Vote &amp; discuss</h4><p class="hint">Hold out for the Rakkojae hanok, or go for a comfy Seochon stay?</p></div>
+  </div>
+
+  <div class="section-title">Things to Do — Art, Shopping & Food</div>
+  <div class="section-rule"></div>
+
+  <div class="card" style="border-left:6px solid var(--sage);margin-bottom:18px">
+    <h3 style="color:#4f6043">A note on food — so everyone eats well</h3>
+    <p style="margin:0;font-size:14.5px;color:var(--ink-soft)">Three different eaters, easy to please together. <b>Eric</b> — adventurous, loves seafood, will try almost anything (skips pork). <b>Rachael</b> — keeps it simple, just good sustenance; no pork and nothing too fishy. <b>Joan</b> — no red meat, otherwise easy. So chicken, seafood, noodles, tempura and mild dishes keep everyone happy, while Eric chases the bolder local specialties — with the pork/BBQ items flagged below.</p>
+  </div>
+
+  <div class="card" style="border-left:6px solid var(--indigo);margin-bottom:18px">
+    <h3 style="color:#3a4a63">A note on art &amp; shopping</h3>
+    <p style="margin:0;font-size:14.5px;color:var(--ink-soft)">We're art people across the board and love bringing pieces home — so the picks below favor <b>galleries you can actually collect from</b>, artisan studios, and <b>one-of-a-kind, place-specific makers</b> over generic souvenirs. Joan has an eye for <b>interesting designers and unique clothing</b>. We'll happily splurge on something truly singular that can only be bought there — and skip the cheap stuff. (Not gamers, though Eric enjoys pop-culture finds.)</p>
+  </div>
+
+  <div class="acts">
+
+    <div class="actcard">
+      <h3>Tokyo</h3>
+      <div class="row"><b><span class="ic">🎨</span> Installation art:</b> teamLab <b>Borderless</b> (Azabudai Hills) and teamLab <b>Planets</b> (Toyosu) — the two big immersive-art worlds. Book timed tickets well ahead; they sell out. Also the Mori Art Museum in Roppongi.</div>
+      <div class="row"><b><span class="ic">🏛</span> Museums &amp; galleries:</b> Tokyo National Museum in Ueno (Japan's oldest &amp; largest — a great first-timer overview for Joan), the serene Nezu Museum (art + garden in Aoyama), and the Ghibli Museum in Mitaka (book well ahead).</div>
+      <div class="row"><b><span class="ic">🛍</span> Shopping:</b> For Joan's designer eye — Aoyama &amp; Omotesandō (Comme des Garçons, Issey Miyake) and Dover Street Market Ginza; for art, the Tennoz/Terrada and Roppongi contemporary galleries and the Ōedo Antique Market; plus Nakano Broadway for Eric's vintage pop-culture finds. The one-of-a-kind, not the souvenir stalls.</div>
+      <div class="row"><b><span class="ic">🍜</span> Food:</b> Something for everyone — Eric in sushi &amp; sashimi heaven; Rachael happy with tempura, chicken katsu, yakitori or a mild shio/chicken ramen; Joan with chicken &amp; seafood (skip the wagyu/beef spots).</div>
+    </div>
+
+    <div class="actcard">
+      <h3>Kyoto <span style="font-size:13px;color:var(--ink-soft);font-weight:400">+ Osaka day trip</span></h3>
+      <div class="row"><b><span class="ic">🎨</span> Installation art:</b> On the Osaka day, <b>teamLab Botanical Garden Osaka</b> — a real night garden turned into living art (pairs beautifully with Dotonbori after dark). In Kyoto: lantern-lit Gion lanes and the Kyotographie photo galleries.</div>
+      <div class="row"><b><span class="ic">🏛</span> Museums &amp; galleries:</b> Kyoto National Museum (Higashiyama), the contemporary <b>Kyoto City KYOCERA Museum of Art</b> with its strong rotating shows, and the National Museum of Modern Art, Kyoto (MoMAK) — excellent on modern painting &amp; crafts.</div>
+      <div class="row"><b><span class="ic">🛍</span> Shopping:</b> Artisan pieces you can only get here — handmade ceramics, indigo &amp; Nishijin textiles, a Kyoto kitchen knife, washi paper, and SOU·SOU's original designs; browse the Sanjō/Teramachi galleries and antique shops for collectible art and one-off vintage kimono.</div>
+      <div class="row"><b><span class="ic">🍜</span> Food:</b> Kyoto's yudofu (tofu) &amp; obanzai. On the Osaka day, Eric can dive into takoyaki, kushikatsu &amp; street seafood while Rachael keeps it simple with udon, gyoza or chicken katsu (skip pork). Kyoto's dashi can taste fishy — easy to steer Rachael around.</div>
+    </div>
+
+    <div class="actcard">
+      <h3>Fukuoka</h3>
+      <div class="row"><b><span class="ic">🎨</span> Installation art:</b> <b>teamLab Forest Fukuoka</b> at BOSS E·ZO, beside the PayPay Dome — an interactive digital forest.</div>
+      <div class="row"><b><span class="ic">🏛</span> Museums &amp; galleries:</b> <b>Kyushu National Museum</b> in Dazaifu (pairs with the shrine — Japan's grand history museum), the Fukuoka Asian Art Museum (contemporary Asian art at Nakasu-Kawabata), and the Fukuoka Art Museum in Ōhori Park.</div>
+      <div class="row"><b><span class="ic">🛍</span> Shopping:</b> The Daimyō district for independent designers, plus genuine local craft from the makers themselves — hand-woven Hakata-ori silk and hand-painted Hakata dolls; worth gallery-hopping for collectible pieces too.</div>
+      <div class="row"><b><span class="ic">🍜</span> Food:</b> A real food city — Eric should hit the Nakasu <b>yatai</b> (street stalls), fresh seafood &amp; mentaiko. Heads-up: the famous Hakata ramen is pork (tonkotsu); easy crowd-pleasers are <b>mizutaki</b> (chicken hot-pot), seafood and Hakata udon. (Joan: skip motsunabe — it's offal/beef.)</div>
+    </div>
+
+    <div class="actcard">
+      <h3>Busan</h3>
+      <div class="row"><b><span class="ic">🎨</span> Installation art:</b> <b>Arte Museum Busan</b> in Yeongdo — the largest of the Arte Museums, with immersive media-art rooms (the "Starry Busan" finale); plus Museum 1.</div>
+      <div class="row"><b><span class="ic">🏛</span> Museums &amp; galleries:</b> Busan Museum of Art with <b>Space Lee Ufan</b>, MOCA Busan on Eulsukdo Island (nature &amp; eco themes), and <b>F1963</b> — a former wire factory turned art complex with Kukje Gallery, a bookstore and café.</div>
+      <div class="row"><b><span class="ic">🛍</span> Shopping:</b> Independent designers around Jeonpo, and <b>F1963</b> — a former factory turned arts complex with Kukje Gallery, an art bookstore and makers' studios where you can actually collect a piece. Quality over tourist-market quantity.</div>
+      <div class="row"><b><span class="ic">🍜</span> Food:</b> A seafood city — Eric will love Jagalchi fish market &amp; raw-fish (hoe). Rachael &amp; Joan stick to dak-galbi &amp; samgyetang (chicken), bibimbap or Korean fried chicken (no red meat). <b>Birthday dinner idea:</b> a Haeundae chicken hot-pot or an ocean-view seafood table.</div>
+    </div>
+
+    <div class="actcard" style="grid-column:1/-1">
+      <h3>Seoul</h3>
+      <div class="row"><b><span class="ic">🎨</span> Installation art:</b> <b>teamLab: LIFE</b> at the DDP (Dongdaemun Design Plaza — Zaha Hadid's landmark building).</div>
+      <div class="row"><b><span class="ic">🏛</span> Museums &amp; galleries:</b> The <b>Leeum Museum of Art</b> (Samsung — traditional + contemporary in landmark architecture), <b>MMCA</b> Seoul (national modern &amp; contemporary), the calm Amorepacific Museum of Art, and the vast <b>National Museum of Korea</b> (a wonderful first-visit overview for Joan).</div>
+      <div class="row"><b><span class="ic">🛍</span> Shopping:</b> Korea's gallery heart — Samcheong-dong &amp; Insadong galleries and Kukje Gallery for collectible Korean art, hanji paper and ceramics; designer fashion in Seongsu-dong, Garosu-gil and the Hannam boutiques (great for Joan). One-of-a-kind over fast fashion.</div>
+      <div class="row"><b><span class="ic">🍜</span> Food:</b> Eric can graze adventurous bites at Gwangjang Market (even live octopus) &amp; plenty of seafood; for Rachael &amp; Joan, jjimdak &amp; dak-galbi (chicken), samgyetang, bibimbap, japchae and Korean fried chicken — skipping the pork/beef BBQ. The bindaetteok (mung-bean pancake) is a great shared bite.</div>
+    </div>
+
+  </div>
+
+  <div class="section-title">Booking Status</div>
+  <div class="section-rule"></div>
+  <div class="status-grid">
+    <div class="card">
+      <h3>Bookable now</h3>
+      <ul>
+        <li><span class="ok">✓</span> Chinzanso — Tokyo (online)</li>
+        <li><span class="ok">✓</span> Hotel Kanra — Kyoto</li>
+        <li><span class="ok">✓</span> Agora Hilltop — Fukuoka</li>
+        <li><span class="ok">✓</span> JB Design — Busan</li>
+      </ul>
+      <p style="font-size:13.5px;color:var(--ink-soft);margin:10px 0 0">These four lock down a clean itinerary if we want certainty.</p>
+    </div>
+    <div class="card">
+      <h3>Waiting on direct enquiry</h3>
+      <ul>
+        <li><span class="wait">⏳</span> Hiiragiya — Kyoto <i>(the upgrade if a bed-room exists)</i></li>
+        <li><span class="wait">⏳</span> Tawaraya — Kyoto</li>
+        <li><span class="wait">⏳</span> Sanso Murata — Yufuin side-trip</li>
+        <li><span class="wait">⏳</span> Rakkojae — Seoul <i>(pick hinges on this reply)</i></li>
+      </ul>
+      <p style="font-size:13.5px;color:var(--ink-soft);margin:10px 0 0">All four enquiry emails are drafted and ready to send.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Suggested Packing List</div>
+  <div class="section-rule"></div>
+  <p style="text-align:center;color:var(--ink-soft);font-size:14px;max-width:730px;margin:0 auto 20px">
+    Built for <b>carry-on only</b> across mixed autumn weather — mild days in Japan (13–21°C) and a chilly Seoul (down to ~6°C) — with a laundry reset mid-trip, so you can pack ~5–6 days of clothes.
+  </p>
+  <div class="acts">
+    <div class="actcard">
+      <h3>👕 Layers &amp; clothing</h3>
+      <div class="row">Versatile layers — tops plus a warm mid-layer (light sweater or fleece); Seoul gets cold at night.</div>
+      <div class="row">A <b>packable warm jacket</b> and a compact rain shell or travel umbrella (autumn showers).</div>
+      <div class="row">One smart-casual outfit for the nicer birthday dinners. Quick-dry fabrics pack &amp; wash best.</div>
+      <div class="row">Scarf and light gloves for the cooler Seoul leg.</div>
+    </div>
+    <div class="actcard">
+      <h3>👟 Footwear &amp; bags</h3>
+      <div class="row">Broken-in <b>walking shoes</b> — lots of pavement and temple steps — ideally slip-on style (shoes come off at ryokan, temples &amp; teamLab).</div>
+      <div class="row">A <b>foldable tote or packable duffel</b> for shopping finds on the way home.</div>
+      <div class="row">A small crossbody day bag.</div>
+    </div>
+    <div class="actcard">
+      <h3>🔌 Tech &amp; docs</h3>
+      <div class="row"><b>Universal adapter</b> — Japan is Type A (100V), Korea Type C/F (220V) — plus a power bank.</div>
+      <div class="row">Phone with e-SIM or pocket Wi-Fi; set up Suica (Japan) &amp; T-money (Korea) for transit; download offline maps.</div>
+      <div class="row">Passports, United / Star Alliance details, insurance, and a copy of each.</div>
+    </div>
+    <div class="actcard">
+      <h3>🧴 Health &amp; toiletries</h3>
+      <div class="row">Travel-size toiletries (carry-on liquids ≤100 ml); any medications in their original packaging.</div>
+      <div class="row">Hand sanitizer, a couple of masks for transit, and blister plasters for all the walking.</div>
+      <div class="row">Reusable water bottle.</div>
+    </div>
+    <div class="actcard" style="grid-column:1/-1">
+      <h3>✨ Trip-specific</h3>
+      <div class="row"><b>Nice socks</b> for the teamLab museums (shoes off) — and at teamLab Planets you wade through water, so quick-dry or roll-up trousers help.</div>
+      <div class="row">A small <b>laundry kit</b> (a few detergent sheets) for the mid-trip wash in Fukuoka or Busan.</div>
+      <div class="row">Carry some <b>cash</b> — yen and won are still useful for markets, small shops and shrines.</div>
+    </div>
+  </div>
+
+  <footer><b>Last updated: 11 June 2026</b> · living document · tap your name, vote &amp; discuss — everyone sees the same board 🍁</footer>
+</div>
+
+<div class="toolbar">
+  <button class="btn ghost" onclick="load()">↻ Refresh board</button>
+</div>
+
+<script>
+  const PEOPLE = ['Joan','Rachael','Eric'];
+  const lc = s => s.toLowerCase();
+
+  /* ───────────────────────────────────────────────────────────
+     LIVE SHARED BOARD SETUP (one time) — see Shared_Board_Setup.md
+     in this folder. Paste your deployed Google Apps Script web-app
+     URL below, replacing PASTE_YOUR_APPS_SCRIPT_URL. Then everyone's
+     votes and comments sync here for all three of us.
+     ─────────────────────────────────────────────────────────── */
+  const API_URL = 'https://script.google.com/macros/s/AKfycby1BZny35CewTwgVlgq9Av02tMsDiohxLu3ZTJVng0ZWrGG6u-YoZB0bUKKu65TxuczaQ/exec';
+  function ready(){ return API_URL && API_URL.indexOf('PASTE_YOUR') === -1; }
+  const SETUP_MSG = "The live board isn't on yet — see the orange setup note at the very top (Rachael).";
+
+  let me = localStorage.getItem('asiaWho') || '';
+  let rows = [];
+
+  (function buildWho(){
+    const bar = document.getElementById('whoBar');
+    bar.innerHTML = '<span>You are posting as:</span> ' + PEOPLE.map(p =>
+      '<span class="who-opt '+lc(p)+(me===p?' active':'')+'" data-p="'+p+'">'+p+'</span>').join(' ');
+    bar.querySelectorAll('.who-opt').forEach(el => el.onclick = () => {
+      me = el.dataset.p; localStorage.setItem('asiaWho', me);
+      bar.querySelectorAll('.who-opt').forEach(x => x.classList.toggle('active', x === el));
+      render();
+    });
+  })();
+
+  document.querySelectorAll('.city').forEach(city => {
+    const c = city.dataset.city;
+    const box = city.querySelector('.comments');
+    const choices = [...city.querySelectorAll('table.cmp .prop')].map(p => p.firstChild.textContent.trim());
+
+    const votes = document.createElement('div');
+    votes.className = 'votes'; votes.dataset.city = c;
+    votes.innerHTML = '<div class="vlabel">Group picks — tap your choice</div>';
+    choices.forEach(ch => {
+      const chip = document.createElement('span');
+      chip.className = 'vchip'; chip.dataset.choice = ch;
+      chip.innerHTML = '<span class="cnt">0</span> ' + ch;
+      chip.onclick = () => castVote(c, ch);
+      votes.appendChild(chip);
+    });
+
+    const thread = document.createElement('div');
+    thread.className = 'thread'; thread.dataset.city = c;
+
+    const postrow = document.createElement('div');
+    postrow.className = 'postrow';
+    const input = document.createElement('input');
+    input.type = 'text'; input.placeholder = 'Add a comment…';
+    const btn = document.createElement('button');
+    btn.className = 'btn'; btn.textContent = 'Post';
+    const submit = () => { postComment(c, input.value); input.value = ''; };
+    btn.onclick = submit;
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') submit(); });
+    postrow.appendChild(input); postrow.appendChild(btn);
+
+    box.appendChild(votes); box.appendChild(thread); box.appendChild(postrow);
+  });
+
+  function requireMe(){
+    if (!me){ alert('First tap your name in the bar at the top, so we know who is posting.'); return false; }
+    return true;
+  }
+  function castVote(city, choice){
+    if (!ready()){ alert(SETUP_MSG); return; }
+    if (!requireMe()) return;
+    push({ type:'vote', city, name: me, text: choice });
+  }
+  function postComment(city, text){
+    text = (text||'').trim(); if (!text) return;
+    if (!ready()){ alert(SETUP_MSG); return; }
+    if (!requireMe()) return;
+    push({ type:'comment', city, name: me, text });
+  }
+
+  function push(obj){
+    obj.ts = new Date().toISOString();
+    rows.push(obj); render();
+    fetch(API_URL, { method:'POST', mode:'no-cors',
+      headers:{ 'Content-Type':'text/plain;charset=utf-8' },
+      body: JSON.stringify(obj) })
+      .then(() => setTimeout(load, 900)).catch(() => {});
+  }
+
+  function load(){
+    if (!ready()) return;
+    const cb = 'cb_' + Date.now();
+    const s = document.createElement('script');
+    window[cb] = d => { rows = (d && d.rows) ? d.rows : []; render(); delete window[cb]; s.remove(); };
+    s.src = API_URL + (API_URL.indexOf('?') > -1 ? '&' : '?') + 'callback=' + cb + '&_=' + Date.now();
+    s.onerror = () => s.remove();
+    document.body.appendChild(s);
+  }
+
+  function render(){
+    document.querySelectorAll('.votes').forEach(v => {
+      const c = v.dataset.city;
+      const latest = {};
+      rows.filter(r => r.city === c && r.type === 'vote').forEach(r => { latest[r.name] = r.text; });
+      const tally = {};
+      Object.values(latest).forEach(ch => { tally[ch] = (tally[ch]||0) + 1; });
+      v.querySelectorAll('.vchip').forEach(chip => {
+        const ch = chip.dataset.choice;
+        chip.querySelector('.cnt').textContent = tally[ch] || 0;
+        const voters = Object.keys(latest).filter(n => latest[n] === ch);
+        chip.classList.toggle('mine', latest[me] === ch);
+        chip.title = voters.length ? ('Voted: ' + voters.join(', ')) : '';
+      });
+    });
+    document.querySelectorAll('.thread').forEach(t => {
+      const c = t.dataset.city;
+      const msgs = rows.filter(r => r.city === c && r.type === 'comment')
+                       .sort((a,b) => (a.ts > b.ts ? 1 : -1));
+      t.innerHTML = msgs.map(m =>
+        '<div class="msg"><span class="who '+lc(m.name)+'">'+esc(m.name)+'</span>'+
+        '<span class="t">'+fmt(m.ts)+'</span><div>'+esc(m.text)+'</div></div>').join('');
+    });
+  }
+  function esc(s){ return (s||'').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+  function fmt(ts){ try { return new Date(ts).toLocaleString([], {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}); } catch(e){ return ''; } }
+
+  if (ready()){ load(); setInterval(load, 20000); }
+  else { document.getElementById('setupBar').style.display = 'block'; }
+</script>
+</body>
+</html>
