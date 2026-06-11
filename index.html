@@ -732,9 +732,10 @@
     });
   })();
 
-  document.querySelectorAll('.city').forEach(city => {
+  document.querySelectorAll('.city[data-city]').forEach(city => {
     const c = city.dataset.city;
     const box = city.querySelector('.comments');
+    if (!box) return;
     const choices = [...city.querySelectorAll('table.cmp .prop')].map(p => p.firstChild.textContent.trim());
 
     const votes = document.createElement('div');
