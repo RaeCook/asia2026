@@ -119,9 +119,16 @@
   .actcard .row{font-size:14px;color:var(--ink-soft);margin:8px 0;line-height:1.5}
   .actcard .row b{color:var(--ink)}
   .actcard .ic{font-style:normal}
-  .whoBar{position:sticky;top:0;z-index:40;background:#fffdf8;border-bottom:1px solid var(--line);
+  .whoBar{position:sticky;top:40px;z-index:44;background:#fffdf8;border-bottom:1px solid var(--line);
     padding:9px 14px;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;
     font-family:"Hiragino Sans",sans-serif;font-size:13px;box-shadow:0 2px 6px var(--shadow)}
+  .section-title{scroll-margin-top:100px}
+  .city,.actcard{scroll-margin-top:100px}
+  .toc{position:sticky;top:0;z-index:46;background:linear-gradient(135deg,var(--maple-deep),#7a2818);
+    display:flex;gap:4px;overflow-x:auto;padding:7px 12px;justify-content:center;flex-wrap:wrap}
+  .toc a{color:#fdf6ec;text-decoration:none;font:700 12px/1 "Hiragino Sans",Arial,sans-serif;
+    padding:6px 12px;border-radius:20px;white-space:nowrap;letter-spacing:.04em;text-transform:uppercase}
+  .toc a:hover{background:rgba(255,255,255,.2)}
   .whoBar .who-opt{cursor:pointer;border:1px solid var(--line);border-radius:20px;padding:4px 13px;background:#fff;color:var(--ink)}
   .whoBar .who-opt.active{color:#fff;border-color:transparent}
   .whoBar .who-opt.joan.active{background:var(--joan)} .whoBar .who-opt.rachael.active{background:var(--rachael)} .whoBar .who-opt.eric.active{background:var(--eric)}
@@ -204,7 +211,7 @@
     </figure>
 
     <div class="header-center">
-      <div id="updated" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;font-family:'Hiragino Sans',sans-serif;margin-bottom:8px">🕓 Last updated 11 June 2026 · 5:42 PM MDT</div>
+      <div id="updated" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;font-family:'Hiragino Sans',sans-serif;margin-bottom:8px">🕓 Last updated 11 June 2026 · 5:55 PM MDT</div>
       <div class="kicker">Autumn 2026 · Japan + Korea</div>
       <h1>Where We're Staying</h1>
       <div class="sub">A 3-night-per-city journey · Tokyo → Kyoto → Fukuoka → Busan → Seoul</div>
@@ -237,6 +244,16 @@
 
 <div class="wrap">
 
+  <nav class="toc" id="toc">
+    <a href="#route">Route</a>
+    <a href="#flights">Flights</a>
+    <a href="#stays">Stays</a>
+    <a href="#todo">Do·Shop·Eat</a>
+    <a href="#insurance">Insurance</a>
+    <a href="#booking">Booking</a>
+    <a href="#packing">Packing</a>
+  </nav>
+
   <div class="whoBar" id="whoBar"></div>
 
   <div class="decision">
@@ -263,7 +280,7 @@
     </div>
   </div>
 
-  <div class="section-title">The Route</div>
+  <div class="section-title" id="route">The Route</div>
   <div class="section-rule"></div>
   <div class="timeline">
     <div class="stop transit"><div class="date">Oct 16 · eve</div><div class="where">Fly Denver → Tokyo ✈️</div></div>
@@ -279,7 +296,7 @@
     <div class="stop transit"><div class="date">Nov 2 – 3</div><div class="where">Fly Incheon → Denver · home ✈️</div></div>
   </div>
 
-  <div class="section-title">Getting There — Flights</div>
+  <div class="section-title" id="flights">Getting There — Flights</div>
   <div class="section-rule"></div>
   <p style="text-align:center;color:var(--ink-soft);font-size:14px;max-width:730px;margin:0 auto 20px">
     Prioritizing <b>United &amp; Star Alliance</b> (points-friendly), business class where it's affordable. Business award seats are limited, so worth booking early — and confirm live schedules &amp; fares before ticketing.
@@ -305,7 +322,7 @@
     </div>
   </div>
 
-  <div class="section-title">Stay Considerations — compare & choose, one per city</div>
+  <div class="section-title" id="stays">Stay Considerations — compare & choose, one per city</div>
   <div class="section-rule"></div>
 
   <!-- TOKYO -->
@@ -586,7 +603,7 @@
     <div class="comments"><h4>Vote &amp; discuss</h4><p class="hint">Hold out for the Rakkojae hanok, or go for a comfy Seochon stay?</p></div>
   </div>
 
-  <div class="section-title">Things to Do — Art, Shopping & Food</div>
+  <div class="section-title" id="todo">Things to Do — Art, Shopping & Food</div>
   <div class="section-rule"></div>
 
   <div class="card" style="border-left:6px solid var(--sage);margin-bottom:18px">
@@ -643,7 +660,7 @@
 
   </div>
 
-  <div class="section-title">Booking Status</div>
+  <div class="section-title" id="booking">Booking Status</div>
   <div class="section-rule"></div>
   <div class="status-grid">
     <div class="card">
@@ -668,7 +685,7 @@
     </div>
   </div>
 
-  <div class="section-title">Suggested Packing List</div>
+  <div class="section-title" id="packing">Suggested Packing List</div>
   <div class="section-rule"></div>
   <p style="text-align:center;color:var(--ink-soft);font-size:14px;max-width:730px;margin:0 auto 20px">
     Built for <b>carry-on only</b> across mixed autumn weather — mild days in Japan (13–21°C) and a chilly Seoul (down to ~6°C) — with a laundry reset mid-trip, so you can pack ~5–6 days of clothes.
@@ -707,7 +724,7 @@
     </div>
   </div>
 
-  <div class="section-title">Travel Insurance</div>
+  <div class="section-title" id="insurance">Travel Insurance</div>
   <div class="section-rule"></div>
   <p style="text-align:center;color:var(--ink-soft);font-size:14px;max-width:740px;margin:0 auto 20px">
     Worth getting for an international trip — Medicare doesn't cover care abroad. The deciding factor here is <b>Joan (80 on the trip)</b>: choose a plan with <b>no upper age limit</b> and strong medical/evacuation. Eric (59) and Rachael (50) fit any plan. <i>General info to compare — not advice; get quotes and read each policy.</i>
@@ -733,9 +750,23 @@
       <div class="row"><b>Ballpark:</b> comprehensive policies run ~4–10% of total trip cost; travelers 80+ average ~$60/day, so Joan's share is the bulk. For this ~18-day trip, budget roughly a few hundred dollars total.</div>
       <div class="row"><b>Lower-cost medical-only option:</b> <b><a target="_blank" rel="noopener" href="https://www.geobluetravelinsurance.com/">GeoBlue</a></b> — no trip-cancellation, but excellent overseas medical &amp; evacuation if that's your main concern.</div>
     </div>
+    <div class="actcard" style="grid-column:1/-1">
+      <h3>📋 Real quotes for the three of you <span style="font-weight:400;font-size:12px;color:var(--ink-soft)">— via Squaremouth, 11 Jun 2026 · ages 49/59/79 · $15k trip cost · CO</span></h3>
+      <div class="cmp-wrap" style="padding:6px 0 0">
+        <table class="cmp" style="min-width:560px">
+          <thead><tr><th>Plan</th><th>Medical</th><th>Evacuation</th><th>Cancellation</th><th>Total · 3 people</th></tr></thead>
+          <tbody>
+            <tr class="rec"><td><span class="prop">IMG iTravelInsured Choice<span class="badge">Best value</span></span><span class="ptype">Top seller for seniors · CFAR add-on · pre-ex waiver</span></td><td>$100k</td><td>$500k</td><td>$15k (100%)</td><td><b>$672</b></td></tr>
+            <tr><td><span class="prop">Tin Leg Gold</span><span class="ptype">Most popular · 4.5★ · CFAR add-on · pre-ex waiver</span></td><td>$500k</td><td>$500k</td><td>$15k (100%)</td><td><b>$1,006</b></td></tr>
+            <tr><td><span class="prop">Seven Corners Trip Protection Choice</span><span class="ptype">Highest evacuation · CFAR add-on · pre-ex waiver</span></td><td>$500k</td><td>$1M</td><td>$15k (100%)</td><td><b>$1,416</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row" style="margin-top:8px"><i>All three cover 100% trip-cancellation, emergency medical &amp; evacuation. The pre-existing-condition waiver applies if you buy within ~14 days of your first deposit. Joan is quoted at 79 (her age at departure) — she turns 80 mid-trip, so confirm the final figure. <a target="_blank" rel="noopener" href="https://www.squaremouth.com/">Compare all 42 plans →</a></i></div>
+    </div>
   </div>
 
-  <footer><b>Last updated: 11 June 2026 · 5:42 PM MDT</b> · living document · tap your name, vote &amp; discuss — everyone sees the same board 🍁</footer>
+  <footer><b>Last updated: 11 June 2026 · 5:55 PM MDT</b> · living document · tap your name, vote &amp; discuss — everyone sees the same board 🍁</footer>
 </div>
 
 <div class="toolbar">
