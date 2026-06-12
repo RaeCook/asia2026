@@ -211,7 +211,7 @@
     </figure>
 
     <div class="header-center">
-      <div id="updated" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;font-family:'Hiragino Sans',sans-serif;margin-bottom:8px">🕓 Last updated 11 June 2026 · 6:34 PM MDT</div>
+      <div id="updated" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;font-family:'Hiragino Sans',sans-serif;margin-bottom:8px">🕓 Last updated 11 June 2026 · 6:45 PM MDT</div>
       <div class="kicker">Autumn 2026 · Japan + Korea</div>
       <h1>Where We're Staying</h1>
       <div class="sub">A 3-night-per-city journey · Tokyo → Kyoto → Fukuoka → Busan → Seoul</div>
@@ -253,6 +253,8 @@
     <a href="#insurance">Insurance</a>
     <a href="#booking">Status</a>
     <a href="#confirmations">Confirmations</a>
+    <a href="#currency">$</a>
+    <a href="#words">Words</a>
     <a href="#packing">Packing</a>
   </nav>
 
@@ -866,7 +868,104 @@
     </div>
   </div>
 
-  <footer><b>Last updated: 11 June 2026 · 6:34 PM MDT</b> · living document · tap your name, vote &amp; discuss — everyone sees the same board 🍁</footer>
+  <div class="section-title" id="words">Important Words to Know</div>
+  <div class="section-rule"></div>
+  <p style="text-align:center;color:var(--ink-soft);font-size:14px;max-width:740px;margin:0 auto 20px">
+    A few polite basics go a long way — and download <b>Google Translate</b> (with offline Japanese &amp; Korean packs + camera mode for menus and signs).
+  </p>
+  <div class="acts">
+    <div class="actcard">
+      <h3>🇯🇵 Japanese</h3>
+      <div class="row"><b>Hello:</b> Konnichiwa (こんにちは)</div>
+      <div class="row"><b>Please:</b> Onegai shimasu (お願いします)</div>
+      <div class="row"><b>Thank you:</b> Arigatō gozaimasu (ありがとうございます)</div>
+      <div class="row"><b>Excuse me / sorry:</b> Sumimasen (すみません)</div>
+      <div class="row"><b>Yes / No:</b> Hai / Iie</div>
+      <div class="row"><b>Delicious!:</b> Oishii (おいしい)</div>
+      <div class="row"><b>How much?:</b> Ikura desu ka?</div>
+      <div class="row"><b>Cheers!:</b> Kanpai (乾杯)</div>
+    </div>
+    <div class="actcard">
+      <h3>🇰🇷 Korean</h3>
+      <div class="row"><b>Hello:</b> Annyeonghaseyo (안녕하세요)</div>
+      <div class="row"><b>Please (give me…):</b> …juseyo (주세요)</div>
+      <div class="row"><b>Thank you:</b> Gamsahamnida (감사합니다)</div>
+      <div class="row"><b>Excuse me (to get attention):</b> Jeogiyo (저기요)</div>
+      <div class="row"><b>Sorry:</b> Joesonghamnida (죄송합니다)</div>
+      <div class="row"><b>Yes / No:</b> Ne / Aniyo</div>
+      <div class="row"><b>Delicious!:</b> Masisseoyo (맛있어요)</div>
+      <div class="row"><b>How much?:</b> Eolmaeyo? (얼마예요?)</div>
+      <div class="row"><b>Cheers!:</b> Geonbae (건배)</div>
+    </div>
+    <div class="actcard" style="grid-column:1/-1">
+      <h3>🌐 Google Translate</h3>
+      <div class="row"><b>Download:</b> <a target="_blank" rel="noopener" href="https://apps.apple.com/app/google-translate/id414706506">App Store (iPhone)</a> · <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.google.android.apps.translate">Google Play (Android)</a> · <a target="_blank" rel="noopener" href="https://translate.google.com">web version</a>.</div>
+      <div class="row"><b>Set up offline:</b> in the app, download the <b>Japanese</b> and <b>Korean</b> language packs so it works without data.</div>
+      <div class="row"><b>Handy modes:</b> point the <b>camera</b> at menus &amp; signs for instant translation, and use <b>Conversation</b> mode to talk back-and-forth.</div>
+    </div>
+  </div>
+
+  <div class="section-title" id="currency">Currency Converter</div>
+  <div class="section-rule"></div>
+  <p style="text-align:center;color:var(--ink-soft);font-size:14px;max-width:680px;margin:0 auto 18px">
+    Live <b>USD ⇄ Japanese yen (¥)</b> and <b>Korean won (₩)</b> — rates refresh automatically each time you open the page. <span id="fxdate"></span>
+  </p>
+  <div class="card" style="max-width:520px;margin:0 auto">
+    <div style="display:flex;align-items:center;gap:10px;margin:8px 0">
+      <label style="width:96px;font-weight:700;font-family:'Hiragino Sans',sans-serif">USD&nbsp;$</label>
+      <input id="fxusd" type="number" inputmode="decimal" placeholder="100" style="flex:1;border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:15px;background:#fff;color:var(--ink)">
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;margin:8px 0">
+      <label style="width:96px;font-weight:700;font-family:'Hiragino Sans',sans-serif">JPY&nbsp;¥</label>
+      <input id="fxjpy" type="number" inputmode="decimal" placeholder="—" style="flex:1;border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:15px;background:#fff;color:var(--ink)">
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;margin:8px 0">
+      <label style="width:96px;font-weight:700;font-family:'Hiragino Sans',sans-serif">KRW&nbsp;₩</label>
+      <input id="fxkrw" type="number" inputmode="decimal" placeholder="—" style="flex:1;border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:15px;background:#fff;color:var(--ink)">
+    </div>
+    <div id="fxrates" style="font-size:13px;color:var(--ink-soft);margin-top:10px;text-align:center">Loading today's rates…</div>
+  </div>
+
+  <div class="section-title" id="packing">Suggested Packing List</div>
+  <div class="section-rule"></div>
+  <p style="text-align:center;color:var(--ink-soft);font-size:14px;max-width:730px;margin:0 auto 20px">
+    Built for <b>carry-on only</b> across mixed autumn weather — mild days in Japan (mid-50s to ~70°F) and a chilly Seoul (down to ~43°F) — with a laundry reset mid-trip, so you can pack ~5–6 days of clothes.
+  </p>
+  <div class="acts">
+    <div class="actcard">
+      <h3>👕 Layers &amp; clothing</h3>
+      <div class="row">Versatile layers — tops plus a warm mid-layer (light sweater or fleece); Seoul gets cold at night.</div>
+      <div class="row">A <b>packable warm jacket</b> and a compact rain shell or travel umbrella.</div>
+      <div class="row">One smart-casual outfit for the nicer birthday dinners. Quick-dry fabrics pack &amp; wash best.</div>
+      <div class="row">Scarf and light gloves for the cooler Seoul leg.</div>
+    </div>
+    <div class="actcard">
+      <h3>👟 Footwear &amp; bags</h3>
+      <div class="row">Broken-in <b>walking shoes</b>, ideally slip-on (shoes come off at ryokan, temples &amp; teamLab).</div>
+      <div class="row">A <b>foldable tote or packable duffel</b> for shopping finds on the way home.</div>
+      <div class="row">A small crossbody day bag.</div>
+    </div>
+    <div class="actcard">
+      <h3>🔌 Tech &amp; docs</h3>
+      <div class="row"><b>Universal adapter</b> — Japan is Type A (100V), Korea Type C/F (220V) — plus a power bank.</div>
+      <div class="row">Phone with e-SIM or pocket Wi-Fi; set up Suica (Japan) &amp; T-money (Korea); offline maps.</div>
+      <div class="row">Passports, United / Star Alliance details, insurance, and a copy of each.</div>
+    </div>
+    <div class="actcard">
+      <h3>🧴 Health &amp; toiletries</h3>
+      <div class="row">Travel-size toiletries (carry-on liquids ≤100 ml); medications in their original packaging.</div>
+      <div class="row">Hand sanitizer, a couple of masks for transit, and blister plasters for all the walking.</div>
+      <div class="row">Reusable water bottle.</div>
+    </div>
+    <div class="actcard" style="grid-column:1/-1">
+      <h3>✨ Trip-specific</h3>
+      <div class="row"><b>Nice socks</b> for the teamLab museums (shoes off) — at teamLab Planets you wade through water, so quick-dry or roll-up trousers help.</div>
+      <div class="row">A small <b>laundry kit</b> (detergent sheets) for the mid-trip wash in Fukuoka or Busan.</div>
+      <div class="row">Carry some <b>cash</b> — yen and won are still useful for markets, small shops and shrines.</div>
+    </div>
+  </div>
+
+  <footer><b>Last updated: 11 June 2026 · 6:45 PM MDT</b> · living document · tap your name, vote &amp; discuss — everyone sees the same board 🍁</footer>
 </div>
 
 <div class="toolbar">
@@ -999,6 +1098,25 @@
 
   if (ready()){ load(); setInterval(load, 20000); }
   else { document.getElementById('setupBar').style.display = 'block'; }
+</script>
+<script>
+(function(){
+  var usd=document.getElementById('fxusd'),jpy=document.getElementById('fxjpy'),krw=document.getElementById('fxkrw');
+  if(!usd) return;
+  var R={JPY:null,KRW:null};
+  function r2(n){ return Math.round(n*100)/100; }
+  function fromUSD(){ if(R.JPY==null)return; var v=parseFloat(usd.value)||0; jpy.value=Math.round(v*R.JPY); krw.value=Math.round(v*R.KRW); }
+  usd.addEventListener('input',fromUSD);
+  jpy.addEventListener('input',function(){ if(R.JPY==null)return; var v=parseFloat(jpy.value)||0,u=v/R.JPY; usd.value=r2(u); krw.value=Math.round(u*R.KRW); });
+  krw.addEventListener('input',function(){ if(R.KRW==null)return; var v=parseFloat(krw.value)||0,u=v/R.KRW; usd.value=r2(u); jpy.value=Math.round(u*R.JPY); });
+  fetch('https://open.er-api.com/v6/latest/USD').then(function(r){return r.json();}).then(function(d){
+    R.JPY=d.rates.JPY; R.KRW=d.rates.KRW;
+    document.getElementById('fxrates').innerHTML='1 USD = ¥'+Math.round(R.JPY)+' &nbsp;·&nbsp; ₩'+Math.round(R.KRW).toLocaleString();
+    var ds=(d.time_last_update_utc||'').replace(' 00:00:01 +0000','').replace(/^[A-Za-z]{3}, /,'');
+    if(ds) document.getElementById('fxdate').textContent='(rates as of '+ds+')';
+    if(!usd.value){ usd.value=100; } fromUSD();
+  }).catch(function(){ document.getElementById('fxrates').textContent='Live rates unavailable right now — please reload.'; });
+})();
 </script>
 </body>
 </html>
