@@ -124,11 +124,17 @@
     font-family:"Hiragino Sans",sans-serif;font-size:13px;box-shadow:0 2px 6px var(--shadow)}
   .section-title{scroll-margin-top:100px}
   .city,.actcard{scroll-margin-top:100px}
-  .toc{position:sticky;top:0;z-index:46;background:linear-gradient(135deg,var(--maple-deep),#7a2818);
-    display:flex;gap:4px;overflow-x:auto;padding:7px 12px;justify-content:center;flex-wrap:wrap}
-  .toc a{color:#fdf6ec;text-decoration:none;font:700 12px/1 "Hiragino Sans",Arial,sans-serif;
-    padding:6px 12px;border-radius:20px;white-space:nowrap;letter-spacing:.04em;text-transform:uppercase}
-  .toc a:hover{background:rgba(255,255,255,.2)}
+  .toc{position:sticky;top:0;z-index:46;background:rgba(255,253,248,.94);backdrop-filter:saturate(160%) blur(10px);-webkit-backdrop-filter:saturate(160%) blur(10px);
+    display:flex;gap:5px;overflow-x:auto;padding:9px 16px;align-items:center;white-space:nowrap;scrollbar-width:none;
+    border-bottom:1px solid var(--line);box-shadow:0 6px 16px -12px var(--shadow)}
+  .toc::-webkit-scrollbar{display:none}
+  @media(min-width:1060px){.toc{justify-content:center}}
+  .toc a{display:inline-flex;align-items:center;gap:6px;color:var(--ink-soft);text-decoration:none;
+    font:600 12.5px/1 "Hiragino Sans",Arial,sans-serif;padding:8px 14px;border-radius:999px;white-space:nowrap;
+    transition:background .15s,color .15s,box-shadow .15s}
+  .toc a .ic{font-size:13px}
+  .toc a:hover{background:#f4ebdb;color:var(--maple-deep)}
+  .toc a.active{background:linear-gradient(135deg,var(--maple),var(--maple-deep));color:#fff;box-shadow:0 3px 9px -2px rgba(120,40,20,.5)}
   .whoBar .who-opt{cursor:pointer;border:1px solid var(--line);border-radius:20px;padding:4px 13px;background:#fff;color:var(--ink)}
   .whoBar .who-opt.active{color:#fff;border-color:transparent}
   .whoBar .who-opt.joan.active{background:var(--joan)} .whoBar .who-opt.rachael.active{background:var(--rachael)} .whoBar .who-opt.eric.active{background:var(--eric)}
@@ -211,7 +217,7 @@
     </figure>
 
     <div class="header-center">
-      <div id="updated" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;font-family:'Hiragino Sans',sans-serif;margin-bottom:8px">🕓 Last updated 11 June 2026 · 6:45 PM MDT</div>
+      <div id="updated" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;font-family:'Hiragino Sans',sans-serif;margin-bottom:8px">🕓 Last updated 11 June 2026 · 6:57 PM MDT</div>
       <div class="kicker">Autumn 2026 · Japan + Korea</div>
       <h1>Where We're Staying</h1>
       <div class="sub">A 3-night-per-city journey · Tokyo → Kyoto → Fukuoka → Busan → Seoul</div>
@@ -245,17 +251,17 @@
 <div class="wrap">
 
   <nav class="toc" id="toc">
-    <a href="#route">Route</a>
-    <a href="#flights">Flights</a>
-    <a href="#stays">Stays</a>
-    <a href="#todo">Do·Shop·Eat</a>
-    <a href="#itinerary">Itinerary</a>
-    <a href="#insurance">Insurance</a>
-    <a href="#booking">Status</a>
-    <a href="#confirmations">Confirmations</a>
-    <a href="#currency">$</a>
-    <a href="#words">Words</a>
-    <a href="#packing">Packing</a>
+    <a href="#route"><span class="ic">🗺️</span>Route</a>
+    <a href="#flights"><span class="ic">✈️</span>Flights</a>
+    <a href="#stays"><span class="ic">🛏️</span>Stays</a>
+    <a href="#todo"><span class="ic">🎨</span>Do · Shop · Eat</a>
+    <a href="#itinerary"><span class="ic">🗓️</span>Itinerary</a>
+    <a href="#insurance"><span class="ic">🛡️</span>Insurance</a>
+    <a href="#booking"><span class="ic">📍</span>Status</a>
+    <a href="#confirmations"><span class="ic">✅</span>Confirmations</a>
+    <a href="#currency"><span class="ic">💱</span>Currency</a>
+    <a href="#words"><span class="ic">💬</span>Words</a>
+    <a href="#packing"><span class="ic">🧳</span>Packing</a>
   </nav>
 
   <div class="whoBar" id="whoBar"></div>
@@ -876,26 +882,26 @@
   <div class="acts">
     <div class="actcard">
       <h3>🇯🇵 Japanese</h3>
-      <div class="row"><b>Hello:</b> Konnichiwa (こんにちは)</div>
-      <div class="row"><b>Please:</b> Onegai shimasu (お願いします)</div>
-      <div class="row"><b>Thank you:</b> Arigatō gozaimasu (ありがとうございます)</div>
-      <div class="row"><b>Excuse me / sorry:</b> Sumimasen (すみません)</div>
-      <div class="row"><b>Yes / No:</b> Hai / Iie</div>
-      <div class="row"><b>Delicious!:</b> Oishii (おいしい)</div>
-      <div class="row"><b>How much?:</b> Ikura desu ka?</div>
-      <div class="row"><b>Cheers!:</b> Kanpai (乾杯)</div>
+      <div class="row"><b>Hello:</b> Konnichiwa (こんにちは) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ja&tl=en&text=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF&op=translate">🔊</a></div>
+      <div class="row"><b>Please:</b> Onegai shimasu (お願いします) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ja&tl=en&text=%E3%81%8A%E9%A1%98%E3%81%84%E3%81%97%E3%81%BE%E3%81%99&op=translate">🔊</a></div>
+      <div class="row"><b>Thank you:</b> Arigatō gozaimasu (ありがとうございます) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ja&tl=en&text=%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99&op=translate">🔊</a></div>
+      <div class="row"><b>Excuse me / sorry:</b> Sumimasen (すみません) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ja&tl=en&text=%E3%81%99%E3%81%BF%E3%81%BE%E3%81%9B%E3%82%93&op=translate">🔊</a></div>
+      <div class="row"><b>Yes / No:</b> Hai / Iie <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ja&tl=en&text=%E3%81%AF%E3%81%84%E3%80%81%E3%81%84%E3%81%84%E3%81%88&op=translate">🔊</a></div>
+      <div class="row"><b>Delicious!:</b> Oishii (おいしい) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ja&tl=en&text=%E3%81%8A%E3%81%84%E3%81%97%E3%81%84&op=translate">🔊</a></div>
+      <div class="row"><b>How much?:</b> Ikura desu ka? <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ja&tl=en&text=%E3%81%84%E3%81%8F%E3%82%89%E3%81%A7%E3%81%99%E3%81%8B&op=translate">🔊</a></div>
+      <div class="row"><b>Cheers!:</b> Kanpai (乾杯) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ja&tl=en&text=%E4%B9%BE%E6%9D%AF&op=translate">🔊</a></div>
     </div>
     <div class="actcard">
       <h3>🇰🇷 Korean</h3>
-      <div class="row"><b>Hello:</b> Annyeonghaseyo (안녕하세요)</div>
-      <div class="row"><b>Please (give me…):</b> …juseyo (주세요)</div>
-      <div class="row"><b>Thank you:</b> Gamsahamnida (감사합니다)</div>
-      <div class="row"><b>Excuse me (to get attention):</b> Jeogiyo (저기요)</div>
-      <div class="row"><b>Sorry:</b> Joesonghamnida (죄송합니다)</div>
-      <div class="row"><b>Yes / No:</b> Ne / Aniyo</div>
-      <div class="row"><b>Delicious!:</b> Masisseoyo (맛있어요)</div>
-      <div class="row"><b>How much?:</b> Eolmaeyo? (얼마예요?)</div>
-      <div class="row"><b>Cheers!:</b> Geonbae (건배)</div>
+      <div class="row"><b>Hello:</b> Annyeonghaseyo (안녕하세요) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ko&tl=en&text=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94&op=translate">🔊</a></div>
+      <div class="row"><b>Please (give me…):</b> …juseyo (주세요) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ko&tl=en&text=%EC%A3%BC%EC%84%B8%EC%9A%94&op=translate">🔊</a></div>
+      <div class="row"><b>Thank you:</b> Gamsahamnida (감사합니다) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ko&tl=en&text=%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4&op=translate">🔊</a></div>
+      <div class="row"><b>Excuse me (to get attention):</b> Jeogiyo (저기요) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ko&tl=en&text=%EC%A0%80%EA%B8%B0%EC%9A%94&op=translate">🔊</a></div>
+      <div class="row"><b>Sorry:</b> Joesonghamnida (죄송합니다) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ko&tl=en&text=%EC%A3%84%EC%86%A1%ED%95%A9%EB%8B%88%EB%8B%A4&op=translate">🔊</a></div>
+      <div class="row"><b>Yes / No:</b> Ne / Aniyo <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ko&tl=en&text=%EB%84%A4%2C%20%EC%95%84%EB%8B%88%EC%9A%94&op=translate">🔊</a></div>
+      <div class="row"><b>Delicious!:</b> Masisseoyo (맛있어요) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ko&tl=en&text=%EB%A7%9B%EC%9E%88%EC%96%B4%EC%9A%94&op=translate">🔊</a></div>
+      <div class="row"><b>How much?:</b> Eolmaeyo? (얼마예요?) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ko&tl=en&text=%EC%96%BC%EB%A7%88%EC%98%88%EC%9A%94&op=translate">🔊</a></div>
+      <div class="row"><b>Cheers!:</b> Geonbae (건배) <a target="_blank" rel="noopener" title="Hear it" style="text-decoration:none" href="https://translate.google.com/?sl=ko&tl=en&text=%EA%B1%B4%EB%B0%B0&op=translate">🔊</a></div>
     </div>
     <div class="actcard" style="grid-column:1/-1">
       <h3>🌐 Google Translate</h3>
@@ -965,7 +971,7 @@
     </div>
   </div>
 
-  <footer><b>Last updated: 11 June 2026 · 6:45 PM MDT</b> · living document · tap your name, vote &amp; discuss — everyone sees the same board 🍁</footer>
+  <footer><b>Last updated: 11 June 2026 · 6:57 PM MDT</b> · living document · tap your name, vote &amp; discuss — everyone sees the same board 🍁</footer>
 </div>
 
 <div class="toolbar">
@@ -1116,6 +1122,24 @@
     if(ds) document.getElementById('fxdate').textContent='(rates as of '+ds+')';
     if(!usd.value){ usd.value=100; } fromUSD();
   }).catch(function(){ document.getElementById('fxrates').textContent='Live rates unavailable right now — please reload.'; });
+})();
+</script>
+<script>
+(function(){
+  var bar=document.getElementById('toc'); if(!bar||!('IntersectionObserver' in window)) return;
+  var links={}; [].forEach.call(bar.querySelectorAll('a'),function(a){ links[a.getAttribute('href').slice(1)]=a; });
+  var cur=null;
+  var obs=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){
+      if(cur) cur.classList.remove('active');
+      cur=links[e.target.id];
+      if(cur){ cur.classList.add('active');
+        var off=cur.offsetLeft-bar.clientWidth/2+cur.clientWidth/2;
+        bar.scrollTo({left:Math.max(0,off),behavior:'smooth'});
+      }
+    }});
+  },{rootMargin:'-46% 0px -50% 0px',threshold:0});
+  Object.keys(links).forEach(function(id){ var el=document.getElementById(id); if(el) obs.observe(el); });
 })();
 </script>
 </body>
